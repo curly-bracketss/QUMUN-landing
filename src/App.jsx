@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import kumunLogo from './assets/KUMUNlogo.png'
+import qumunLogo from './assets/QUMUNlogo.png'
 import universityLogo from './assets/karabakh-university.png'
 import ministryLogo from './assets/tehsil-nazirliyi-eng.png'
 import enMainLogo from './assets/enmain.png'
@@ -19,28 +19,24 @@ const content = {
       { href: '#contact', label: 'Contact' },
     ],
     hero: {
-      kicker: '1st Karabakh University Model UN Conference',
-      title: 'KUMUN 2026',
-      subtitle: 'Karabakh University, Khankendi, Azerbaijan',
+      kicker: '1st Qarabağ Univeristy Model UN Conference',
+      title: 'QUMUN 2026',
       description:
-        'Organized by the International Youth Dialogue Platform (IYDP), with the support of the Ministry of Science and Education of Azerbaijan and in partnership with Karabakh University, KUMUN 2026 brings national and international young leaders together to discuss regional and global challenges, exchange ideas, and explore collaboration opportunities.',
+        'Organized by the International Youth Dialogue Platform (IYDP), with the support of the Ministry of Science and Education of Azerbaijan and in partnership with Qarabağ Univeristy, QUMUN 2026 brings national and international young leaders together to discuss regional and global challenges, exchange ideas, and explore collaboration opportunities.',
     },
     buttons: {
       apply: 'Apply Now',
-      partner: 'Partnership',
-      mail: 'Contact the Team',
+      partner: 'Partnership'
     },
     conferenceInfoTitle: 'CONFERENCE INFO',
     conferenceInfo: [
-      { label: 'Location', value: 'Karabakh University, Khankendi' },
-      { label: 'Dates', value: 'May 29-31, 2026' },
+      { label: 'Location', value: 'Qarabağ Univeristy, Khankendi' },
       { label: 'Working Language', value: 'English' },
       { label: 'Included', value: 'Accommodation, meals, materials, Baku-Khankendi transport' },
+      { label: 'Not included', value: 'Airport transfers, international travel costs' }
     ],
     applicationsTitle: 'APPLICATION WINDOW',
-    applications: [
-      { role: 'Applications Individual Delegates', date: 'Deadline: April 15, 2026' }, { role: 'Applications Chairs & Directors', date: 'Deadline: April 5, 2026' }
-    ],
+
     highlightsTitle: 'CONFERENCE HIGHLIGHTS',
     highlights: [
       { value: '120+', label: 'LOCAL AND INTERNATIONAL Participants', sub: '' },
@@ -48,36 +44,64 @@ const content = {
       { value: '20+', label: 'Countries to be represented', sub: '' },
       { value: '30+', label: 'Universities to be involved', sub: '' },
     ],
-    committeesTitle: 'COMMITTEES TO BE SIMULATED',
+    committeesTitle: 'COMMITTEES',
     committees: [
       { name: 'UN Security Council (UNSC)', image: unImage, link: 'https://www.un.org/securitycouncil/' },
       { name: 'UNESCO', image: unescoImage, link: 'https://www.unesco.org/' },
       { name: 'International Court of Justice (ICJ)', image: icjImage, link: 'https://www.icj-cij.org/' },
       { name: 'Economic and Social Council (ECOSOC)', image: unImage, link: 'https://ecosoc.un.org/' },
     ],
+    partnersTitle: 'PARTNERS',
+    partnersIntro: 'Organizers, donors, and institutional partners supporting QUMUN 2026.',
     problemTitle: 'About',
     problemText: [
-      ' The Karabakh University International Model United Nations Conference(KUMUN 2026) marks a historic milestone as the first international MUN conference hosted in Khankendi, Azerbaijan.Taking place from May 29–31, 2026, this landmark event will bring together ambitious students, young professionals, and future leaders from around the world to engage in high - level diplomatic dialogue, legal analysis, and collaborative problem - solving.',
-      'Organized by the International Youth Dialogue Platform (IYDP), with the support of the Ministry of Science and Education of the Republic of Azerbaijan, and hosted by Karabakh University, KUMUN 2026 provides a dynamic and intellectually rigorous platform for participants to explore pressing global challenges.'
+      {
+        eventName: 'About ',
+        summary: {
+          text: ['QUMUN 2026 is the inaugural International Model United Nations Conference hosted by Qarabağ Univeristy, taking place on May 29–31, 2026 in the historic city of Khankendi - a place where history, culture, and tradition meet modern development, to engage in high-level debate and collaborative problem-solving.', 'The conference brings together aspiring diplomats, lawyers, and global thinkers from around the world. Delegates will engage in high-level debates across four UN committees - UNSC, UNESCO, ICJ, and ECOSOC- while developing key skills in diplomacy, negotiation, and critical thinking. Alongside academic sessions, participants will experience Azerbaijan’s rich culture and build meaningful international connections. The event is open to national and international delegates, as well as experienced applicants for leadership roles as Chairs and Directors, QUMUN 2026 welcomes participants at all levels. Applications are reviewed on a rolling basis, and early application is strongly encouraged.'
+        ,"QUMUN 2026 creates a unique international environment for cultural exchange, lasting connections, and Azerbaijan's renowned hospitality. It stands as a symbol of opportunity, cooperation, and youth empowerment, bringing voices across borders to shape ideas, inspire action, and define the leaders of tomorrow. As the first conference of its kind at Qarabağ Univeristy, the event offers a dynamic platform where ideas meet action and future leaders are shaped."]},
+          registration: {
+          overview:
+            'Applications are open to national and international delegates, as well as experienced individuals applying for leadership roles as Chairs and Directors. All applications are reviewed on a rolling basis, and applicants are encouraged to apply early.',
+
+        },
+        conferenceOfferings: {
+          skillsFocus: ['Diplomacy', 'Negotiation', 'Public speaking', 'Critical thinking', 'Leadership'],
+          activities: ['Engaging debates', 'Structured committee sessions', 'Collaborative resolution drafting','Cultural experiences', 'City tour'],
+        },
+
+      },
     ],
     goalsTitle: 'GOALS',
     goalsIntro:
-      'KUMUN 2026 aims to empower youth, support regional development in Karabakh, and foster international dialogue by bringing together young leaders to collaborate, learn, and contribute to global and local progress.',
+      'QUMUN 2026 aims to empower youth, support regional development in Karabakh, and foster international dialogue by bringing together young leaders to collaborate, learn, and contribute to global and local progress.',
     results: [
       { title: 'Supporting the Great Return Program', desc: 'Contributing to the socio-economic integration of the Karabakh and Eastern Zangezur economic regions by engaging local and international youth and promoting ongoing reconstruction and development projects on a global stage.' },
       { title: 'Human Capital Development', desc: 'Empowering students and youth from the region and beyond by strengthening their leadership, knowledge, and practical skills, including drafting official documents in line with United Nations standards.' },
       { title: 'International Dialogue & Cooperation', desc: 'Bringing together young leaders from around the world to foster dialogue, collaboration, and academic exchange, while positioning the region as a hub for peace and cooperation.' },
     ],
-    partnersTitle: 'ORGANIZER AND PARTNERS',
-    footer: '© 2026 KUMUN • International Youth Dialogue Platform',
+
+    footer: '© 2026 QUMUN • International Youth Dialogue Platform',
   },
 }
 
 const partners = [
-  { name: 'Ministry of Education', logo: ministryLogo },
-  { name: 'IYDP', logo: enMainLogo },
-  { name: 'Karabakh University', logo: universityLogo },
+  { name: 'Ministry of Education', logo: ministryLogo, role: "DONOR", url: "https://edu.gov.az/" },
+  { name: 'IYDP', logo: enMainLogo, role: "ORGANIZER", url: "https://iydp.org/" },
+  { name: 'Qarabağ Univeristy', logo: universityLogo, role: "PARTNER", url: "https://karabakh.edu.az/" },
 ]
+
+const partnerRoleAccent = {
+  DONOR: 'var(--c1)',
+  ORGANIZER: 'var(--c2)',
+  PARTNER: 'var(--c3)',
+}
+
+const partnerRoleBadge = {
+  DONOR: 'bg-[var(--c1)]/12 text-[var(--c1)] border-[var(--c1)]/30',
+  ORGANIZER: 'bg-[var(--c2)]/12 text-[var(--c2)] border-[var(--c2)]/30',
+  PARTNER: 'bg-[var(--c3)]/12 text-[var(--c3)] border-[var(--c3)]/30',
+}
 
 const accentColors = ['var(--c1)', 'var(--c2)', 'var(--c3)', 'var(--c4)']
 
@@ -139,7 +163,7 @@ export default function App() {
           <div lang="en" className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
             <div lang="en" className="flex items-center justify-between gap-4 md:justify-start">
               <div lang="en" className="text-left leading-snug">
-                <p lang="en" className="text-sm font-semibold text-[var(--text)] sm:text-base">1st Karabakh University</p>
+                <p lang="en" className="text-sm font-semibold text-[var(--text)] sm:text-base">1st Qarabağ Univeristy</p>
                 <p lang="en" className="text-sm font-semibold text-[var(--text)] sm:text-base">International Model UN Conference</p>
               </div>
 
@@ -197,51 +221,38 @@ export default function App() {
           <div lang="en" className="mx-auto w-[90%] max-w-[1400px] hero-content">
             <div lang="en" className="text-white text-center sm:text-left">
               <div lang="en" className="flex flex-col items-center gap-4 sm:flex-row sm:items-center">
-
-                <img src={kumunLogo} alt="KUMUN logo" lang="en" className="h-20 w-20 object-contain md:h-40 md:w-40" />
+                <img src={qumunLogo} alt="QUMUN logo" lang="en" className="h-36 w-36 object-contain md:h-44 md:w-44" />
 
                 <div>
-                  <p lang="en" className="text-sm font-semibold uppercase tracking-[0.2em] text-white/70 sm:tracking-[0.32em]">{t.hero.kicker}</p>
-                  <h1 lang="en" className="title-standard mt-3 drop-shadow-[0_12px_30px_rgba(0,0,0,0.35)]">
-                    {t.hero.title}
-                  </h1>
-                </div>
-              </div>
-              <p lang="en" className="mt-4 text-sm font-semibold text-white/80">{t.hero.subtitle}</p>
+                 
+              
+                   <p lang="en" className="mt-4 text-sm font-semibold text-white/80">{t.hero.subtitle}</p>
               <p lang="en" className="mt-5 max-w-xl text-base text-white/90 md:text-lg">
                 {t.hero.description}
               </p>
-              <div lang="en" className="mt-8 flex flex-wrap justify-center gap-4 sm:justify-start">
-                <a href="https://forms.gle/DTo5k7ep6uHHxWUS9" target="_blank" rel="noopener noreferrer" lang="en" className="btn btn-primary">
-                  Apply as a Delegate
-
-                </a>
-                <a href="https://forms.gle/PNX5nDcyXuxXZY866" target="_blank" rel="noopener noreferrer" lang="en" className="btn btn-glass">
-                  Apply as a Chair & Director
-                </a>
+                </div>
               </div>
+             
+
             </div>
             <div lang="en" className="hero-panel p-6 text-white md:p-8">
               <div lang="en" className="section-heading">
-                <p lang="en" className="section-kicker section-kicker-light">{t.applicationsTitle}</p>
-                <h2 lang="en" className="title-standard">Key Dates</h2>
+
+                <h2 lang="en" className="title-standard">  Conference Dates
+</h2>
               </div>
-              <div lang="en" className="mt-5 space-y-3">
-                {t.applications.map(item => (
-                  <div key={item.role} lang="en" className="bg-white/10 p-4">
-                    <p lang="en" className="text-sm font-semibold text-white">{item.role}</p>
-                    <p lang="en" className="text-sm text-white/80">{item.date}</p>
-                  </div>
-                ))}
-              </div>
+
               <div lang="en" className="mt-6 bg-white/10 p-4">
-                <p lang="en" className="text-xs font-semibold uppercase tracking-[0.3em] text-white/70">Conference Dates</p>
-                <p lang="en" className="mt-2 text-lg font-semibold text-white">May 29-31, 2026</p>
+
+                <p lang="en" className="mt-2 text-lg font-semibold text-white">May 23-25, 2026</p>
                 <p lang="en" className="text-sm text-white/80">Khankendi, Azerbaijan</p>
               </div>
-              <a href="mailto:kumun@iydp.org" lang="en" className="btn btn-glass mt-6 w-full">
-                {t.buttons.mail}
-              </a>
+              <p
+                  lang="en"
+                  className="inline-flex items-center rounded-2xl border border-white/30 bg-white/15 px-4 py-3 my-3 text-sm font-semibold text-white shadow-[0_10px_24px_rgba(15,23,42,0.12)] backdrop-blur-sm"
+              >
+                Applications are closed
+              </p>
             </div>
           </div>
         </section>
@@ -284,12 +295,60 @@ export default function App() {
         </section>
 
         <section id="about" lang="en" className="mx-auto w-[90%] max-w-[1400px] py-14">
-          <div lang="en" className="rounded-3xl bg-[var(--surface)]/80 backdrop-blur-md border border-white p-8 shadow-[0_18px_40px_rgba(15,23,42,0.08)] md:p-10 transition hover:bg-[var(--surface)]/95">
+          <div lang="en" className="rounded-3xl bg-[var(--surface)]/80   flex flex-col items-center justify-center backdrop-blur-md border border-white p-8 shadow-[0_18px_40px_rgba(15,23,42,0.08)] md:p-10 transition hover:bg-[var(--surface)]/95">
 
             <h2 lang="en" className="title-standard mt-4 text-[var(--c3)]">{t.problemTitle}</h2>
-            <div lang="en" className="mt-6 space-y-4 text-[var(--muted)] text-lg">
-              {t.problemText.map(text => (
-                <p key={text}>{text}</p>
+            <div lang="en" className="mt-6  space-y-6 text-[var(--muted)] text-lg">
+              {t.problemText.map((item, index) => (
+                <div key={item.eventName || index} lang="en" className="space-y-6">
+                  {item.summary.text.map((item, index) => (
+                    <p lang="en">{item}</p>
+                  ))}
+                  <p lang="en" className="text-base text-[var(--muted)]">{item.positioning}</p>
+
+
+                  <div lang="en" className="rounded-2xl  bg-white/60 backdrop-blur-sm p-5 border border-white shadow-[0_10px_24px_rgba(15,23,42,0.04)]">
+                    <p lang="en" className="text-xs font-bold uppercase text-[var(--muted)]">Registration</p>
+                    <div className="mt-3">                         <p lang="en" className="rounded-2xl border sm:text-xs md:text-sm font-semibold text-[var(--text)] border-[var(--c4)]/30 bg-[var(--c4)]/10 p-3 sm:p-4 md:p-5 shadow-[0_12px_24px_rgba(106,160,63,0.12)]">
+{item.registration.overview}</p>
+                    </div>
+                  </div>
+
+                  <div lang="en" className="grid gap-4 text-base">
+                    <div lang="en" className="rounded-2xl bg-white/60 backdrop-blur-sm p-5 border border-white shadow-[0_10px_24px_rgba(15,23,42,0.04)]">
+                      <p lang="en" className="text-xs font-bold uppercase text-[var(--muted)]">Conference Offers</p>
+                      <div className="mt-3 grid gap-4 md:grid-cols-2">
+                        <div lang="en" className="rounded-2xl border border-[var(--c3)]/30 bg-[var(--c3)]/10 p-3 sm:p-4 md:p-5 shadow-[0_12px_24px_rgba(106,160,63,0.12)]">
+                          <div lang="en" className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 sm:gap-3">
+                            <p lang="en" className="text-xs sm:text-sm md:text-base font-semibold text-[var(--text)]">Skills Focus</p>
+                          </div>
+                          <ul className="mt-3 sm:mt-4 flex flex-wrap gap-2 sm:gap-2.5 md:gap-3">
+                            {item.conferenceOfferings.skillsFocus.map(skill => (
+                              <li key={skill} lang="en" className="rounded-full border border-[var(--c3)]/30 bg-white/70 px-2 sm:px-3 py-1 text-[11px] sm:text-xs md:text-sm font-semibold text-[var(--text)] shadow-[0_6px_12px_rgba(106,160,63,0.12)] whitespace-nowrap">
+                                {skill}
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+
+                        <div lang="en" className="rounded-2xl border border-[var(--c1)]/30 bg-[var(--c1)]/10 p-3 sm:p-4 md:p-5 shadow-[0_12px_24px_rgba(0,150,214,0.12)]">
+                          <div lang="en" className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 sm:gap-3">
+                            <p lang="en" className="text-xs sm:text-sm md:text-base font-semibold text-[var(--text)]">Activities</p>
+                          </div>
+                          <ul className="mt-3 sm:mt-4 flex flex-wrap gap-2 sm:gap-2.5 md:gap-3">
+                            {item.conferenceOfferings.activities.map(activity => (
+                              <li key={activity} lang="en" className="rounded-full border border-[var(--c1)]/30 bg-white/70 px-2 sm:px-3 py-1 text-[11px] sm:text-xs md:text-sm font-semibold text-[var(--text)] shadow-[0_6px_12px_rgba(0,150,214,0.12)] whitespace-nowrap">
+                                {activity}
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
               ))}
             </div>
           </div>
@@ -328,8 +387,8 @@ export default function App() {
         </section>
 
         <section id="goals" lang="en" className="mx-auto w-[90%] max-w-[1400px] py-14">
-          <div lang="en" className="rounded-3xl bg-[var(--surface)]/80 backdrop-blur-md border border-white p-8 shadow-[0_18px_40px_rgba(15,23,42,0.08)] md:p-10 transition hover:bg-[var(--surface)]/95">
-            <h2 lang="en" className="title-standard mt-0 text-[var(--text)]">{t.goalsTitle}</h2>
+          <div lang="en" className="rounded-3xl  flex flex-col items-center justify-center bg-[var(--surface)]/80 backdrop-blur-md border border-white p-8 shadow-[0_18px_40px_rgba(15,23,42,0.08)] md:p-10 transition hover:bg-[var(--surface)]/95">
+            <h2 lang="en" className="title-standard mt-0 text-[var(--c2)]">{t.goalsTitle}</h2>
             <p lang="en" className="mt-6 text-[var(--text)] font-medium text-lg">{t.goalsIntro}</p>
             <ul lang="en" className="mt-6 space-y-3 text-[var(--muted)] text-base">
               {t.results.map(item => (
@@ -346,8 +405,8 @@ export default function App() {
         </section>
 
         <section id="committees" lang="en" className="mx-auto w-[90%] max-w-[1400px] py-14">
-          <div lang="en" className="rounded-3xl bg-[var(--surface)]/80 backdrop-blur-md border border-white p-8 shadow-[0_18px_40px_rgba(15,23,42,0.08)] md:p-10 transition hover:bg-[var(--surface)]/95">
-            <h2 lang="en" className="title-standard mt-0 text-[var(--text)]">{t.committeesTitle}</h2>
+          <div lang="en" className="rounded-3xl bg-[var(--surface)]/80  flex flex-col items-center justify-center backdrop-blur-md border border-white p-8 shadow-[0_18px_40px_rgba(15,23,42,0.08)] md:p-10 transition hover:bg-[var(--surface)]/95">
+            <h2 lang="en" className="title-standard mt-0 text-[var(--c4)]">{t.committeesTitle}</h2>
             <div lang="en" className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
               {t.committees.map((item, index) => (
                 <a
@@ -375,18 +434,41 @@ export default function App() {
 
 
         <section id="partners" lang="en" className="mx-auto w-[90%] max-w-[1400px] pb-16 pt-6">
-          <div lang="en" className="rounded-3xl bg-[var(--surface)]/50 backdrop-blur-lg border border-white p-8 shadow-[0_18px_40px_rgba(15,23,42,0.05)] md:p-10 transition hover:bg-[var(--surface)]/70">
-            <h2 lang="en" className="title-standard mt-2">{t.partnersTitle}</h2>
-            <div lang="en" className="mt-10 flex flex-wrap justify-center items-stretch gap-6 max-w-5xl mx-auto">
-              {partners.map(item => (
-                <div key={item.name} lang="en" className="flex items-center justify-center w-full sm:w-[calc(50%-0.75rem)] lg:w-72 rounded-2xl bg-white/70 backdrop-blur-md border border-white p-6 shadow-sm transition hover:scale-105 hover:bg-white/90">
-                  <img
-                    src={item.logo}
-                    alt={item.name}
-                    lang="en" className="h-20 w-auto object-contain drop-shadow-[0_4px_8px_rgba(15,23,42,0.1)] contrast-110"
-                  />
-                </div>
-              ))}
+          <div lang="en" className="rounded-3xl bg-[var(--surface)]/60 backdrop-blur-lg border border-white p-8 shadow-[0_18px_40px_rgba(15,23,42,0.05)] md:p-10 transition hover:bg-[var(--surface)]/80">
+
+
+            <div lang="en" className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {partners.map(item => {
+                const accent = partnerRoleAccent[item.role] ?? 'var(--border)'
+                const badgeClass = partnerRoleBadge[item.role] ?? 'bg-white/70 text-[var(--muted)] border-[var(--border)]'
+
+                return (
+                  <div
+                    key={item.name}
+                    lang="en"
+                    className="group flex flex-col items-center justify-center relative overflow-hidden rounded-3xl border border-white/80 bg-white/70 p-6 shadow-[0_12px_30px_rgba(15,23,42,0.06)] transition hover:-translate-y-1 hover:bg-white/90"
+                  >
+                    <span lang="en" className="absolute left-0 top-0 h-1 w-full" style={{ backgroundColor: accent }} />
+                    <div lang="en" className="absolute -right-12 -top-12 h-28 w-28 rounded-full opacity-20 blur-3xl" style={{ backgroundColor: accent }} />
+
+                    <div lang="en" className="flex items-center justify-between">
+                      <span lang="en" className={`inline-flex items-center rounded-full border px-3 py-1 text-[0.65rem] font-semibold tracking-[0.25em] ${badgeClass}`}>
+                        {item.role}
+                      </span>
+                    </div>
+
+                    <a href={item.url} lang="en" className="mt-6 flex items-center justify-center rounded-2xl bg-white/80 border border-white p-6 shadow-sm">
+                      <img
+                        src={item.logo}
+                        alt={item.name}
+                        lang="en"
+                        className="h-20 w-auto object-contain drop-shadow-[0_4px_10px_rgba(15,23,42,0.12)] transition-transform duration-300 group-hover:scale-105"
+                      />
+                    </a>
+
+                  </div>
+                )
+              })}
             </div>
           </div>
         </section>
